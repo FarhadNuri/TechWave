@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.work-sans-font {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.nav-item {
+    list-style: none;
+    margin-right: 34px;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+.display-flex {
+  display: flex;
+}
+.navbar {
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(26, 11, 46, 1);
+    color: white;
+    padding: 20px;
+}
+.btn-primary {
+    background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)));
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.hero-image {
+    width: 100%;
+}
+@media screen and (max-width: 576px) {
+        .navbar, .nav-links {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+}
