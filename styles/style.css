@@ -42,10 +42,90 @@
 .hero-image {
     width: 100%;
 }
+.text-color {
+    color: rgba(255, 255, 255, 0.8);
+}
+.paragraph-top {
+    margin-top: 20px;
+}
+.bg-light {
+    display: inline;                                                
+}
+.banner-content {
+    max-width: 550px;
+}
+.podcast {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    background-color: rgba(26, 11, 46, 1);
+}
+.podcast-title {
+    color: white;
+    font-size: 3rem;
+}
+.podcast-details {
+    text-align: center;
+    font-size: 1.1rem;
+    
+    
+}
+
+.podcast-numbers {
+    display: flex;
+    justify-content: space-around; 
+    margin-top: 60px;
+    padding-bottom: 40px;
+    color: #00ff88;
+    
+}
+.podcast-number-item h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;    
+}
+.podcast-number-item {
+    text-align: center;
+}
+.line hr {
+    width: 80%; /* Makes it responsive */
+    max-width: 1200px; /* Limits size on big screens */
+    margin: 60px auto; /* Centers the line and adds spacing */
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white line */
+}
 @media screen and (max-width: 576px) {
         .navbar, .nav-links {
         flex-direction: column;
         padding: 20px;
+    }
+    .podcast {
+        padding: 20px;
+        font-size: 0.8rem;
+    } 
+    .podcast-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+    .podcast-details {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 25px;
+    }
+.podcast-numbers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        
+    }
+
+    .line hr {
+        margin: 30px auto;
+        
+    }
+
+    .podcast-number-item h3 {
+        font-size: 1.8rem; /* Shrink numbers slightly for mobile */
     }
 
 }
