@@ -18,9 +18,22 @@
     margin-right: 34px;
 }
 
+
 .nav-links li a {
     text-decoration: none;
     color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    color: #00ff88;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+    font-weight: 700;
+
+
 }
 
 .display-flex {
@@ -32,11 +45,17 @@
     align-items: center;
     background-color: rgba(26, 11, 46, 1);
     color: white;
-    padding: 20px;
+    padding: 10px;
+}
+
+.hamburger-menu {
+    display: none;
+    width: 30px;
+    cursor: pointer;
 }
 
 .btn-primary {
-    background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)));
+    background: linear-gradient(87.64deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
     color: white;
     font-weight: 600;
     padding: 10px 20px;
@@ -44,6 +63,13 @@
     border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(87.64deg, rgba(251, 9, 180, 1), rgba(145, 0, 248, 1), rgba(247, 233, 63, 1));
+    transform: scale(1.05);
+    transition: transform 0.5s, background 0.5s;
 }
 
 .hero-image {
@@ -66,8 +92,96 @@
     display: inline;
 }
 
+.banner {
+    position: relative;
+    background: url('../assets/hero-bg.png') no-repeat center center;
+    background-size: cover;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     max-width: 550px;
+    padding: 40px 20px;
+}
+
+.hero-icon {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.hero-circle {
+    width: 300px;
+    height: 300px;
+}
+
+.microphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+}
+
+.new-badge {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background-color: #00ff88;
+    color: #1a0b2e;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.banner-brand {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.banner-brand-text {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 25px;
+}
+
+.banner-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.banner-buttons button img {
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #00ff88;
+    color: #00ff88;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+
+
+    transform: scale(1.05);
+    transition: transform 0.5s, color 0.5s;
 }
 
 .podcast {
@@ -147,7 +261,7 @@ footer {
 .footer-brand:hover {
     cursor: pointer;
     color: #00ff88;
-    transform: scaleY(1.1);
+    transform: scale(1.02);
     transition: transform 0.5s;
 }
 
@@ -436,10 +550,81 @@ footer {
 
 @media screen and (max-width: 576px) {
 
-    .navbar,
     .nav-links {
-        flex-direction: column;
+        display: none;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: 15px 20px;
+
+
+    }
+
+    .banner {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .banner-content {
+        position: static;
+        transform: none;
+        margin: 0 auto;
+        margin-top: 30px;
         padding: 20px;
+    }
+
+    .hero-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .microphone {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+    }
+
+
+    .hero-icon {
+        margin-bottom: 20px;
+    }
+
+    .banner-brand {
+        font-size: 2rem;
+    }
+
+    .banner-brand-text {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .banner-buttons {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .new-badge {
+        top: 0;
+        right: 0;
+        padding: 4px 12px;
+        font-size: 0.7rem;
     }
 
     .podcast {
@@ -498,6 +683,7 @@ footer {
     }
 
     .footer-brand {
+        margin-top: 10px;
         font-size: 2.5rem;
 
     }
